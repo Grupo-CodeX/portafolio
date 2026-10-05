@@ -70,11 +70,7 @@
             align-items: center;
             text-align: center;
             padding: 40px 20px;
-            background: linear-gradient(
-                135deg,
-                #0d1117,
-                #161b22
-            );
+            background: linear-gradient(135deg, #0d1117, #161b22);
         }
 
         .hero-content {
@@ -96,21 +92,7 @@
             margin-bottom: 30px;
         }
 
-    
-        .card-buttons {
-            display: flex;
-            justify-content: center; /* Los centra horizontalmente */
-            gap: 12px;               /* Espacio de separación entre el botón de GitHub y LinkedIn */
-        }
-        
-     
-        .button {
-            display: inline-block;
-            text-decoration: none;
-            white-space: nowrap;     /* Evita que el texto interno se parta en dos líneas */
-        }
-
-
+        /* BOTONES */
         .button {
             display: inline-block;
             padding: 12px 25px;
@@ -118,6 +100,7 @@
             background: #238636;
             color: white;
             text-decoration: none;
+            white-space: nowrap;
             border-radius: 6px;
             transition: 0.3s;
         }
@@ -125,6 +108,25 @@
         .button:hover {
             background: #2ea043;
             transform: translateY(-2px);
+        }
+
+        /* Botón aún sin enlace (LinkedIn pendiente) */
+        .button.pending {
+            background: #30363d;
+            color: #8b949e;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        .card-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .card-buttons .button {
+            margin: 0;
         }
 
         section {
@@ -173,6 +175,21 @@
 
         .card p {
             color: #8b949e;
+        }
+
+        .card .role {
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 3px 12px;
+            border: 1px solid #30363d;
+            border-radius: 20px;
+            color: #58a6ff;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .card .card-buttons {
+            margin-top: 18px;
         }
 
         .projects {
@@ -263,13 +280,8 @@
                 y avances en el área de Ingeniería de Sistemas.
             </p>
 
-            <a href="#proyectos" class="button">
-                Ver proyectos
-            </a>
-
-            <a href="#equipo" class="button">
-                Conocer equipo
-            </a>
+            <a href="#proyectos" class="button">Ver proyectos</a>
+            <a href="#equipo" class="button">Conocer equipo</a>
 
         </div>
     </section>
@@ -299,95 +311,93 @@
     </section>
 
 
- <!-- EQUIPO -->
-<section id="equipo">
+    <!-- EQUIPO -->
+    <!--
+        PARA ACTUALIZAR:
+        - Rol: cambia el texto dentro de <span class="role">.
+        - LinkedIn: reemplaza href="#" por la URL real y borra la clase "pending".
+    -->
+    <section id="equipo">
 
-    <h2>Nuestro equipo</h2>
+        <h2>Nuestro equipo</h2>
 
-    <div class="members">
+        <div class="members">
 
-        <!-- Integrante 1 -->
-        <div class="card">
-            <h3>Rosa Antonette Salvatierra Serrano</h3>
-            <p><strong>Integrante del equipo</strong></p>
-            <p>Ingeniería de Sistemas</p>
-            <p>UPDS</p>
-            <br>
-            <div class="card-buttons">
-                <a href="https://github.com/rosass2006-ctrl" target="_blank" class="button">GitHub</a>
-                <a href="#" class="button">LinkedIn</a>
+            <!-- Integrante 1 -->
+            <div class="card">
+                <h3>Rosa Antonette Salvatierra Serrano</h3>
+                <span class="role">Rol por definir</span>
+                <p>Ingeniería de Sistemas</p>
+                <p>UPDS</p>
+                <div class="card-buttons">
+                    <a href="https://github.com/rosass2006-ctrl" target="_blank" rel="noopener" class="button">GitHub</a>
+                    <a href="#" class="button pending" title="Próximamente">LinkedIn</a>
+                </div>
             </div>
+
+            <!-- Integrante 2 -->
+            <div class="card">
+                <h3>Jesús Andrés Flores Paz</h3>
+                <span class="role">Rol por definir</span>
+                <p>Ingeniería de Sistemas</p>
+                <p>UPDS</p>
+                <div class="card-buttons">
+                    <a href="https://github.com/Mozandres" target="_blank" rel="noopener" class="button">GitHub</a>
+                    <a href="#" class="button pending" title="Próximamente">LinkedIn</a>
+                </div>
+            </div>
+
+            <!-- Integrante 3 -->
+            <div class="card">
+                <h3>Leonardo Avila Bejarano</h3>
+                <span class="role">Rol por definir</span>
+                <p>Ingeniería de Sistemas</p>
+                <p>UPDS</p>
+                <div class="card-buttons">
+                    <a href="https://github.com/LeonardoAvilaB" target="_blank" rel="noopener" class="button">GitHub</a>
+                    <a href="#" class="button pending" title="Próximamente">LinkedIn</a>
+                </div>
+            </div>
+
+            <!-- Integrante 4 -->
+            <div class="card">
+                <h3>Brayan Coronado Rivera</h3>
+                <span class="role">Rol por definir</span>
+                <p>Ingeniería de Sistemas</p>
+                <p>UPDS</p>
+                <div class="card-buttons">
+                    <a href="https://github.com/coronadoriberabrayan-cyber" target="_blank" rel="noopener" class="button">GitHub</a>
+                    <a href="#" class="button pending" title="Próximamente">LinkedIn</a>
+                </div>
+            </div>
+
+            <!-- Integrante 5 -->
+            <div class="card">
+                <h3>Juan Marcelo Soliz Miranda</h3>
+                <span class="role">Rol por definir</span>
+                <p>Ingeniería de Sistemas</p>
+                <p>UPDS</p>
+                <div class="card-buttons">
+                    <a href="https://github.com/HPJUAN" target="_blank" rel="noopener" class="button">GitHub</a>
+                    <a href="#" class="button pending" title="Próximamente">LinkedIn</a>
+                </div>
+            </div>
+
+            <!-- Integrante 6 -->
+            <div class="card">
+                <h3>José Luis Cespedes Ramos</h3>
+                <span class="role">Rol por definir</span>
+                <p>Ingeniería de Sistemas</p>
+                <p>UPDS</p>
+                <div class="card-buttons">
+                    <a href="https://github.com/quepe696" target="_blank" rel="noopener" class="button">GitHub</a>
+                    <a href="#" class="button pending" title="Próximamente">LinkedIn</a>
+                </div>
+            </div>
+
         </div>
 
-        <!-- Integrante 2 (Corregido) -->
-        <div class="card">
-            <h3>Jesús Andrés Flores Paz</h3>
-            <p><strong>Integrante del equipo</strong></p>
-            <p>Ingeniería de Sistemas</p>
-            <p>UPDS</p>
-            <br>
-            <div class="card-buttons">
-                <a href="https://github.com/Mozandres" target="_blank" class="button">GitHub</a>
-                <a href="#" class="button">LinkedIn</a>
-            </div>
-        </div>
-
-        <!-- Integrante 3 -->
-        <div class="card">
-            <h3>Leonardo Avila Bejarano</h3>
-            <p><strong>Integrante del equipo</strong></p>
-            <p>Ingeniería de Sistemas</p>
-            <p>UPDS</p>
-            <br>
-            <div class="card-buttons">
-                <a href="https://github.com/LeonardoAvilaB" target="_blank" class="button">GitHub</a>
-                <a href="#" class="button">LinkedIn</a>
-            </div>
-        </div>
-
-        <!-- Integrante 4 -->
-        <div class="card">
-            <h3>Brayan Coronado Rivera</h3>
-            <p><strong>Integrante del equipo</strong></p>
-            <p>Ingeniería de Sistemas</p>
-            <p>UPDS</p>
-            <br>
-            <div class="card-buttons">
-                <a href="https://github.com/coronadoriberabrayan-cyber" target="_blank" class="button">GitHub</a>
-                <a href="#" class="button">LinkedIn</a>
-            </div>
-        </div>
-
-        <!-- Integrante 5 -->
-        <div class="card">
-            <h3>Juan Marcelo Soliz Miranda</h3>
-            <p><strong>Integrante del equipo</strong></p>
-            <p>Ingeniería de Sistemas</p>
-            <p>UPDS</p>
-            <br>
-            <div class="card-buttons">
-                <a href="https://github.com/HPJUAN" target="_blank" class="button">GitHub</a>
-                <a href="#" class="button">LinkedIn</a>
-            </div>
-        </div>
-
-        <!-- Integrante 6 -->
-        <div class="card">
-            <h3>José Luis Cespedes Ramos</h3>
-            <p><strong>Integrante del equipo</strong></p>
-            <p>Ingeniería de Sistemas</p>
-            <p>UPDS</p>
-            <br>
-            <div class="card-buttons">
-                <a href="https://github.com/quepe696" target="_blank" class="button">GitHub</a>
-                <a href="#" class="button">LinkedIn</a>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
+    </section>
 
 
     <!-- PROYECTOS -->
@@ -398,50 +408,21 @@
         <div class="projects">
 
             <div class="project">
-
                 <h3>Proyecto 1</h3>
-
-                <p>
-                    Descripción del primer proyecto desarrollado
-                    por el equipo.
-                </p>
-
-                <a href="#" class="button">
-                    Ver proyecto
-                </a>
-
+                <p>Descripción del primer proyecto desarrollado por el equipo.</p>
+                <a href="#" class="button pending" title="Próximamente">Ver proyecto</a>
             </div>
 
-
             <div class="project">
-
                 <h3>Proyecto 2</h3>
-
-                <p>
-                    Descripción del segundo proyecto desarrollado
-                    por el equipo.
-                </p>
-
-                <a href="#" class="button">
-                    Ver proyecto
-                </a>
-
+                <p>Descripción del segundo proyecto desarrollado por el equipo.</p>
+                <a href="#" class="button pending" title="Próximamente">Ver proyecto</a>
             </div>
 
-
             <div class="project">
-
                 <h3>Proyecto 3</h3>
-
-                <p>
-                    Descripción del tercer proyecto desarrollado
-                    por el equipo.
-                </p>
-
-                <a href="#" class="button">
-                    Ver proyecto
-                </a>
-
+                <p>Descripción del tercer proyecto desarrollado por el equipo.</p>
+                <a href="#" class="button pending" title="Próximamente">Ver proyecto</a>
             </div>
 
         </div>
@@ -461,18 +442,8 @@
                 a través de GitHub.
             </p>
 
-            <a
-                href="https://github.com/Grupo-CodeX"
-                target="_blank"
-                class="button">
-                GitHub del equipo
-            </a>
-
-            <a
-                href="#"
-                class="button">
-                LinkedIn
-            </a>
+            <a href="https://github.com/Grupo-CodeX" target="_blank" rel="noopener" class="button">GitHub del equipo</a>
+            <a href="#" class="button pending" title="Próximamente">LinkedIn</a>
 
         </div>
 
@@ -481,15 +452,8 @@
 
     <!-- FOOTER -->
     <footer>
-
-        <p>
-            © 2026 Grupo CodeX - Portafolio académico
-        </p>
-
-        <p>
-            Desarrollado con HTML, CSS y GitHub Pages
-        </p>
-
+        <p>© 2026 Grupo CodeX - Portafolio académico</p>
+        <p>Desarrollado con HTML, CSS y GitHub Pages</p>
     </footer>
 
 </body>
